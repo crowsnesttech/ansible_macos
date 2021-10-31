@@ -37,19 +37,52 @@
     - name: Updating Homebrew
       homebrew:
         update_homebrew: yes
-        upgrade_all: yes    
+        upgrade_all: yes
+      when: ansible_machine == "x86_64"
     
     - name: Installing Homebrew Cask Packages
-      homebrew_cask:
+      community.general.homebrew_cask:
         name: "{{ brew_cask_packages }}"
         state: present
         accept_external_apps: True
-      register: result
-      until: result is successful
+      when: ansible_machine == "x86_64"
+      # register: result
+      # until: result is successful
 
     - name: Installing Homebrew Packages
       homebrew:
         name: "{{ brew_packages }}"
         state: present
-      register: result
-      until: result is successful
+      when: ansible_machine == "x86_64"
+      # register: result
+      # until: result is successful
+
+    - name: Updating Homebrew M1 Pro
+      homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
+      environment:
+        PATH: /opt/homebrew/bin:{{ ansible_env.PATH }}
+      when: ansible_machine == "arm64"
+    
+    - name: Installing Homebrew Cask Packages M1 Pro
+      community.general.homebrew_cask:
+        name: "{{ brew_cask_packages }}"
+        state: present
+        accept_external_apps: True
+      environment:
+        PATH: /opt/homebrew/bin:{{ ansible_env.PATH }}
+      when: ansible_machine == "arm64"
+        # register: result
+      # until: result is successful
+
+    - name: Installing Homebrew Packages M1 Pro
+      homebrew:
+        name: "{{ brew_packages }}"
+        state: present
+      environment:
+        PATH: /opt/homebrew/bin:{{ ansible_env.PATH }}
+      when: ansible_machine == "arm64"
+
+        # register: result
+      # until: result is successful

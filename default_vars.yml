@@ -2,38 +2,39 @@ ansible_python_interpreter: "/usr/bin/python3"
 homebrew_cask_appdir: /Applications
 
 brew_cask_packages:
-  - macvim
-  - atom
-  - visual-studio-code
-  - alfred
-  - textmate
-  - brave-browser
-  - bitwarden
-  - discord
-  - obs
-  - spotify
-  - superduper
-  - teamviewer
-  - twitterrific
-  - vlc
-  - balenaetcher
-  - iterm2
-  - microsoft-teams
-  - microsoft-remote-desktop
-  - itsycal
+  # - macvim
+  # - atom
+  # - visual-studio-code
+  # - alfred
+  # - textmate
+  # - brave-browser
+  # - bitwarden
+  # - discord
+  # - obs
+  # - spotify
+  # - superduper
+  # - teamviewer
+  # - twitterrific
+  # - vlc
+  # - balenaetcher
+  # - iterm2
+  # - microsoft-teams
+  # - microsoft-remote-desktop
+  # - itsycal
+  - iina
 
 brew_packages:
-  - nomad
-  - wakeonlan
-  - ipmitool
-  - iperf3
-  - nmap
-  - cowsay
-  - ffmpeg
-  - git
-  - handbrake
-  - speedtest-cli
-  - youtube-dl
+  # - nomad
+  # - wakeonlan
+  # - ipmitool
+  # - iperf3
+  # - nmap
+  # - cowsay
+  # - ffmpeg
+  # - git
+  # - handbrake
+  # - speedtest-cli
+  # - youtube-dl
   - zsh
   - zsh-autosuggestions
   - zsh-syntax-highlighting
