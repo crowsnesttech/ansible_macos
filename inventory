@@ -1,0 +1,3 @@
+rackpro                ansible_connection=ssh
+hackpro                ansible_connection=ssh
+localhost              ansible_connection=local
