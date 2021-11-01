@@ -89,7 +89,7 @@
     - name: zshrc
       copy:
         src: files/zshrc
-        dest: /home/nick/.zshrc
+        dest: /Users/nick/.zshrc
         owner: nick
         group: nick
         mode: "0775"
@@ -97,7 +97,7 @@
     - name: vimrc  
       copy:
         src: files/vimrc
-        dest: /home/nick/.vimrc
+        dest: /Users/nick/.vimrc
         owner: nick
         group: nick
         mode: "0775"
@@ -106,20 +106,20 @@
       become_user: nick
       git:
         repo: https://github.com/ohmyzsh/ohmyzsh.git
-        dest: /home/nick/.oh-my-zsh
+        dest: /Users/nick/.oh-my-zsh
         clone: yes
         update: yes
 
     - name: clone zsh-autosuggestions  
       git:
         repo: https://github.com/zsh-users/zsh-autosuggestions.git
-        dest: /home/nick/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+        dest: /Users/nick/.oh-my-zsh/custom/plugins/zsh-autosuggestions
         clone: yes
         update: yes
     
     - name: clone zsh-syntax-highlighting
       git:
         repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-        dest: /home/nick/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+        dest: /Users/nick/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
         clone: yes
         update: yes
