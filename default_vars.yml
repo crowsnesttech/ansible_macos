@@ -21,6 +21,10 @@ brew_cask_packages:
   - microsoft-teams
   - microsoft-remote-desktop
   - itsycal
+  - xrg
+  - geektool
+  
+
 
 brew_packages:
   - nomad
