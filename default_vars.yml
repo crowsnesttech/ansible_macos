@@ -18,7 +18,7 @@ brew_cask_packages:
   - vlc
   - balenaetcher
   - iterm2
-  - microsoft-teams
+  # - microsoft-teams
   - microsoft-remote-desktop
   - itsycal
   - xrg
