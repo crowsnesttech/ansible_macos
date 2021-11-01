@@ -19,7 +19,7 @@ brew_cask_packages:
   - balenaetcher
   - iterm2
   # - microsoft-teams
-  - microsoft-remote-desktop
+  # - microsoft-remote-desktop
   - itsycal
   - xrg
   - geektool
