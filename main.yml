@@ -83,6 +83,43 @@
       environment:
         PATH: /opt/homebrew/bin:{{ ansible_env.PATH }}
       when: ansible_machine == "arm64"
-
         # register: result
       # until: result is successful
+
+    - name: zshrc
+      copy:
+        src: files/zshrc
+        dest: /home/nick/.zshrc
+        owner: nick
+        group: nick
+        mode: "0775"
+  
+    - name: vimrc  
+      copy:
+        src: files/vimrc
+        dest: /home/nick/.vimrc
+        owner: nick
+        group: nick
+        mode: "0775"
+
+    - name: Clone ohmyzsh
+      become_user: nick
+      git:
+        repo: https://github.com/ohmyzsh/ohmyzsh.git
+        dest: /home/nick/.oh-my-zsh
+        clone: yes
+        update: yes
+
+    - name: clone zsh-autosuggestions  
+      git:
+        repo: https://github.com/zsh-users/zsh-autosuggestions.git
+        dest: /home/nick/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+        clone: yes
+        update: yes
+    
+    - name: clone zsh-syntax-highlighting
+      git:
+        repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        dest: /home/nick/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+        clone: yes
+        update: yes
