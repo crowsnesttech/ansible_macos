@@ -13,7 +13,7 @@ brew_cask_packages:
   - obs
   - spotify
   - superduper
-  - teamviewer
+  # - teamviewer
   - twitterrific
   - vlc
   - balenaetcher
@@ -23,7 +23,7 @@ brew_cask_packages:
   - itsycal
   - xrg
   - geektool
-  
+
 
 
 brew_packages:
