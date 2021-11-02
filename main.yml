@@ -103,7 +103,6 @@
         mode: "0775"
 
     - name: Clone ohmyzsh
-      become_user: nick
       git:
         repo: https://github.com/ohmyzsh/ohmyzsh.git
         dest: /Users/nick/.oh-my-zsh
