@@ -1,8 +1,8 @@
 ---
 
-- hosts: localhost
-  gather_facts: no
-  # become: false
+- hosts: all
+  # gather_facts: no
+  become: false
   vars_files:
     - default_vars.yml
 
@@ -25,13 +25,13 @@
   #       broadcast: 192.168.11.255
   #     delegate_to: localhost
 
-    - name: Wait for system to become reachable
-      wait_for_connection:
-        delay: 10
-        timeout: 30
+    # - name: Wait for system to become reachable
+    #   wait_for_connection:
+    #     delay: 10
+    #     timeout: 30
 
-    - name: Gather facts for first time
-      setup:
+    # - name: Gather facts for first time
+    #   setup:
 
   tasks:
     - name: Updating Homebrew
