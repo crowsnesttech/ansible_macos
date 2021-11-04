@@ -1,4 +1,4 @@
 #rackpro                ansible_connection=ssh
 #hackpro                ansible_connection=ssh
 #mbp14                  ansible_connection=ssh
-192.168.11.182          ansible_connection=ssh,ansible_user=nick
+192.168.11.182          ansible_connection=ssh
