@@ -13,6 +13,7 @@ brew_cask_packages:
   - obs
   - spotify
   - superduper
+  - mos # Trackboll smooth scrolling
   # - teamviewer
   - twitterrific
   - vlc
