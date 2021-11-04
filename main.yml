@@ -1,37 +1,37 @@
 ---
 
 - hosts: all
-  # gather_facts: no
-  become: false
+  gather_facts: no
+  # become: false
   vars_files:
     - default_vars.yml
 
-  # pre_tasks:
-  #   - name: Send a magic Wake-on-LAN packet to HackPro
-  #     wakeonlan:
-  #       mac: 'b4:2e:99:fc:96:2e'
-  #       broadcast: 192.168.11.255
-  #     delegate_to: localhost
+  pre_tasks:
+    - name: Send a magic Wake-on-LAN packet to HackPro
+      wakeonlan:
+        mac: 'b4:2e:99:fc:96:2e'
+        broadcast: 192.168.11.255
+      delegate_to: localhost
 
-  #   - name: Send a magic Wake-on-LAN packet to RackPro
-  #     wakeonlan:
-  #       mac: '10:c3:7b:4f:74:a6'
-  #       broadcast: 192.168.11.255
-  #     delegate_to: localhost   
+    - name: Send a magic Wake-on-LAN packet to RackPro
+      wakeonlan:
+        mac: '10:c3:7b:4f:74:a6'
+        broadcast: 192.168.11.255
+      delegate_to: localhost   
 
-  #   - name: Send a magic Wake-on-LAN packet to MBP14
-  #     wakeonlan:
-  #       mac: 'f0:2f:4b:0b:66:ef'
-  #       broadcast: 192.168.11.255
-  #     delegate_to: localhost
+    - name: Send a magic Wake-on-LAN packet to MBP14
+      wakeonlan:
+        mac: 'f0:2f:4b:0b:66:ef'
+        broadcast: 192.168.11.255
+      delegate_to: localhost
 
-    # - name: Wait for system to become reachable
-    #   wait_for_connection:
-    #     delay: 10
-    #     timeout: 30
+    - name: Wait for system to become reachable
+      wait_for_connection:
+        delay: 10
+        timeout: 30
 
-    # - name: Gather facts for first time
-    #   setup:
+    - name: Gather facts for first time
+      setup:
 
   tasks:
     - name: Updating Homebrew
@@ -106,19 +106,19 @@
       git:
         repo: https://github.com/ohmyzsh/ohmyzsh.git
         dest: /Users/nick/.oh-my-zsh
-        clone: yes
-        update: yes
+        single_branch: yes
+        version: master
 
     - name: clone zsh-autosuggestions  
       git:
         repo: https://github.com/zsh-users/zsh-autosuggestions.git
         dest: /Users/nick/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-        clone: yes
-        update: yes
+        single_branch: yes
+        version: master
     
     - name: clone zsh-syntax-highlighting
       git:
         repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
         dest: /Users/nick/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-        clone: yes
-        update: yes
+        single_branch: yes
+        version: master

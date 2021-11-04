@@ -1,3 +1,4 @@
+ansible_python_interpreter: "/usr/bin/python3"
 homebrew_cask_appdir: /Applications
 
 brew_cask_packages:
@@ -12,6 +13,7 @@ brew_cask_packages:
   - obs
   - spotify
   - superduper
+  - mos # Trackboll smooth scrolling
   # - teamviewer
   - twitterrific
   - vlc
@@ -22,8 +24,8 @@ brew_cask_packages:
   - itsycal
   - xrg
   - geektool
-  - ansible-lint
-  - mos # Trackboll smooth scrolling
+
+
 
 brew_packages:
   - nomad
