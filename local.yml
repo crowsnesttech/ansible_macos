@@ -3,7 +3,7 @@
 - hosts: localhost
   connection: local
   # gather_facts: no
-  # become: false
+  become: false
   vars_files:
     - default_vars.yml
 
