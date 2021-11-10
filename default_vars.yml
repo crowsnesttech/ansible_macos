@@ -28,6 +28,7 @@ brew_cask_packages:
 
 
 brew_packages:
+  - nano
   - nomad
   - wakeonlan
   - ipmitool
