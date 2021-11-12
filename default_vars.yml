@@ -15,7 +15,7 @@ brew_cask_packages:
   - superduper
   - mos # Trackboll smooth scrolling
   # - teamviewer
-  - twitterrific
+  # - twitterrific
   - vlc
   - balenaetcher
   - iterm2
@@ -43,3 +43,5 @@ brew_packages:
   - zsh
   - zsh-autosuggestions
   - zsh-syntax-highlighting
+  - neofetch
+  - htop
