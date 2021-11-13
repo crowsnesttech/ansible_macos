@@ -2,7 +2,6 @@
 
 - hosts: all
   gather_facts: no
-  # become: false
   vars_files:
     - default_vars.yml
 
@@ -27,8 +26,8 @@
 
     - name: Wait for system to become reachable
       wait_for_connection:
-        delay: 10
-        timeout: 30
+        delay: 5
+        timeout: 15
 
     - name: Gather facts for first time
       setup:
@@ -49,16 +48,12 @@
         state: present
         accept_external_apps: True
       when: ansible_machine == "x86_64"
-      # register: result
-      # until: result is successful
 
     - name: Installing Homebrew Packages
       homebrew:
         name: "{{ brew_packages }}"
         state: present
       when: ansible_machine == "x86_64"
-      # register: result
-      # until: result is successful
 
     - name: Updating Homebrew M1 Pro
       homebrew:
@@ -76,8 +71,6 @@
       environment:
         PATH: /opt/homebrew/bin:{{ ansible_env.PATH }}
       when: ansible_machine == "arm64"
-        # register: result
-      # until: result is successful
 
     - name: Installing Homebrew Packages M1 Pro
       homebrew:
@@ -86,42 +79,3 @@
       environment:
         PATH: /opt/homebrew/bin:{{ ansible_env.PATH }}
       when: ansible_machine == "arm64"
-        # register: result
-      # until: result is successful
-
-    # - name: zshrc
-    #   copy:
-    #     src: files/zshrc
-    #     dest: /Users/nick/.zshrc
-    #     owner: nick
-    #     group: nick
-    #     mode: "0775"
-  
-    # - name: vimrc  
-    #   copy:
-    #     src: files/vimrc
-    #     dest: /Users/nick/.vimrc
-    #     owner: nick
-    #     group: nick
-    #     mode: "0775"
-
-    # - name: Clone ohmyzsh
-    #   git:
-    #     repo: https://github.com/ohmyzsh/ohmyzsh.git
-    #     dest: /Users/nick/.oh-my-zsh
-    #     single_branch: yes
-    #     version: master
-
-    # - name: clone zsh-autosuggestions  
-    #   git:
-    #     repo: https://github.com/zsh-users/zsh-autosuggestions.git
-    #     dest: /Users/nick/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-    #     single_branch: yes
-    #     version: master
-    
-    # - name: clone zsh-syntax-highlighting
-    #   git:
-    #     repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-    #     dest: /Users/nick/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-    #     single_branch: yes
-    #     version: master
