@@ -33,7 +33,7 @@
       setup:
 
     - name: Copy and Execute the script 
-      script: ~/git/install-dotfiles/macos-zsh.sh
+      script: ~/git/dotfiles/install-dotfiles/macos-zsh.sh
 
   tasks:
     - name: Updating Homebrew
