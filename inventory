@@ -1,3 +1,7 @@
+[prod]
 rackpro                ansible_connection=ssh
 hackpro                ansible_connection=ssh
-mbp14                  ansible_connection=ssh
+#mbp14                  ansible_connection=ssh
+
+[lab]
+macos-lab100            ansible_connection=ssh

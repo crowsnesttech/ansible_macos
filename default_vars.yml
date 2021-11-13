@@ -1,8 +1,8 @@
-ansible_python_interpreter: "/usr/bin/python3"
 homebrew_cask_appdir: /Applications
 
 brew_cask_packages:
-  - google-chrome
+  - syncthing
+  - google-chrome 
   - macvim
   - atom
   - visual-studio-code
@@ -14,20 +14,20 @@ brew_cask_packages:
   - spotify
   - superduper
   - mos # Trackboll smooth scrolling
-  # - teamviewer
-  # - twitterrific
   - vlc
   - balenaetcher
   - iterm2
-  # - microsoft-teams
-  # - microsoft-remote-desktop
   - itsycal
   - xrg
   - geektool
-
-
+  # Don't seam to want to install
+  # - teamviewer
+  # - twitterrific
+  # - microsoft-teams
+  # - microsoft-remote-desktop    
 
 brew_packages:
+  - syncthing
   - nano
   - nomad
   - wakeonlan
