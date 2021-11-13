@@ -16,7 +16,7 @@
       wakeonlan:
         mac: '10:c3:7b:4f:74:a6'
         broadcast: 192.168.11.255
-      delegate_to: localhost   
+      delegate_to: localhost
 
     - name: Send a magic Wake-on-LAN packet to MBP14
       wakeonlan:
@@ -29,12 +29,17 @@
         delay: 5
         timeout: 15
 
+    - name: Keep Awake
+      command: caffeinate -u -t 1
+
     - name: Gather facts for first time
       setup:
 
     - name: Copy and Execute the script 
       script: ~/git/dotfiles/install-dotfiles/macos-zsh.sh
+        
 
+  
   tasks:
     - name: Updating Homebrew
       homebrew:
