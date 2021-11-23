@@ -1,6 +1,6 @@
 ---
 
-- name: Clone macos-dotfiles
+- name: clone macos-dotfiles
   become_user: nick
   git:
     repo: https://github.com/crowsnesttech/macos-dotfiles.git
@@ -9,7 +9,7 @@
     update: yes
     force: yes
 
-- name: Clone oh-my-zsh
+- name: clone oh-my-zsh
   become_user: nick
   git:
     repo: https://github.com/ohmyzsh/ohmyzsh.git
@@ -48,19 +48,20 @@
 - name: Symbolic link to zshrc
   file:
     src: /Users/nick/git/dotfiles/macos-dotfiles/.nanorc
-    dest: /Users/nick/.nanrc
+    dest: /Users/nick/.nanorc
     owner: nick
     group: staff
     state: link
     force: yes
 
-- name: Clone zsh-autosuggestions
+- name: clone zsh-autosuggestions
   become_user: nick
   git:
     repo: https://github.com/zsh-users/zsh-autosuggestions
     dest: /Users/nick/.oh-my-zsh/custom/plugins/zsh-autosuggestions
     clone: yes
     update: yes
+    force: yes
 
 - name: Clone zsh-syntax-highlighting
   become_user: nick
@@ -69,6 +70,7 @@
     dest: /Users/nick/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     clone: yes
     update: yes
+    force: yes
 
 - name: Copy custom ZSH theme
   copy:
