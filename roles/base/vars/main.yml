@@ -23,6 +23,7 @@ brew_cask_packages:
   - xrg
   - geektool
   - font-hack-nerd-font
+  - joplin
   # Don't seam to want to install
   # - teamviewer
   # - twitterrific
