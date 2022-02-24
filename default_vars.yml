@@ -18,7 +18,7 @@ brew_cask_packages:
   - balenaetcher
   - iterm2
   - itsycal
-  - xrg
+  # - xrg
   - geektool
   # Don't seam to want to install
   # - teamviewer

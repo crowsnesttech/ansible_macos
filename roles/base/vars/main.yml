@@ -15,12 +15,12 @@ brew_cask_packages:
   - obs
   - spotify
   - superduper
-  - mos # Trackboll smooth scrolling
+  - mos # Trackball smooth scrolling
   - vlc
   - balenaetcher
   - iterm2
   - itsycal
-  - xrg
+  # - xrg
   - geektool
   - font-hack-nerd-font
   - joplin
