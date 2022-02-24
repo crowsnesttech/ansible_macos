@@ -3,6 +3,7 @@
 homebrew_cask_appdir: /Applications
 
 brew_cask_packages:
+  - Alfred
   - syncthing
   - google-chrome 
   - macvim
