@@ -18,6 +18,7 @@ brew_cask_packages:
   - balenaetcher
   - iterm2
   - itsycal
+  - grandperspective
   # - xrg
   - geektool
   # Don't seam to want to install

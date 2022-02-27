@@ -21,6 +21,7 @@ brew_cask_packages:
   - balenaetcher
   - iterm2
   - itsycal
+  - grandperspective
   # - xrg
   - geektool
   - font-hack-nerd-font
