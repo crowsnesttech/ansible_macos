@@ -1,0 +1,6 @@
+
+ansible -m ping <hostname>
+ansible -m ping <groupname>
+
+# Run on just one host with --limit
+ansible-playbook --limit "rackpro" main.yml

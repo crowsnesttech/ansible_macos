@@ -1,6 +1,9 @@
+---
+
 homebrew_cask_appdir: /Applications
 
 brew_cask_packages:
+  - Alfred
   - syncthing
   - google-chrome 
   - macvim
@@ -13,7 +16,7 @@ brew_cask_packages:
   - obs
   - spotify
   - superduper
-  - mos # Trackboll smooth scrolling
+  - mos # Trackball smooth scrolling
   - vlc
   - balenaetcher
   - iterm2
@@ -21,6 +24,8 @@ brew_cask_packages:
   - grandperspective
   # - xrg
   - geektool
+  - font-hack-nerd-font
+  - joplin
   # Don't seam to want to install
   # - teamviewer
   # - twitterrific
