@@ -37,7 +37,6 @@ brew_packages:
   - nano
   - nomad
   - wakeonlan
-  - ipmitool
   - iperf3
   - nmap
   - cowsay

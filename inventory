@@ -1,4 +1,4 @@
 [prod]
 rackpro                ansible_connection=ssh
 hackpro                ansible_connection=ssh
-mbp14                  ansible_connection
+mbp14                  ansible_connection=local
