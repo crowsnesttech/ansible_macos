@@ -117,7 +117,7 @@
     state: present
   when: ansible_machine == "x86_64"
 
-- name: Updating Homebrew M1 Pro
+- name: Updating Homebrew arm64
   homebrew:
     update_homebrew: yes
     upgrade_all: yes
@@ -125,7 +125,7 @@
     PATH: /opt/homebrew/bin:{{ ansible_env.PATH }}
   when: ansible_machine == "arm64"
 
-- name: Installing Homebrew Cask Packages M1 Pro
+- name: Installing Homebrew Cask Packages arm64
   community.general.homebrew_cask:
     name: "{{ brew_cask_packages }}"
     state: present
@@ -134,7 +134,7 @@
     PATH: /opt/homebrew/bin:{{ ansible_env.PATH }}
   when: ansible_machine == "arm64"
 
-- name: Installing Homebrew Packages M1 Pro
+- name: Installing Homebrew Packages arm64
   homebrew:
     name: "{{ brew_packages }}"
     state: present
